@@ -1,0 +1,128 @@
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  position: fixed; /* Fixed position for the navbar */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays on top */
+  background: white; /* Ensure readability */
+  flex-direction: row; /* Arrange items in a row */
+}
+
+/* Logo styling */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo image and text */
+  width: 50px; /* Adjust width to fit content */
+  height: auto; /* Adjust height to fit content */
+}
+
+/* Logo text styling */
+.nav-logo p {
+  color: #171717;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 1.5vw; /* Adjust font size for responsiveness */
+}
+
+/* Toggle button styling */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto; /* Push it to the end of the navbar */
+  z-index: 1001; /* Ensure it is above other content */
+}
+
+.nav-toggle .hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #626262;
+}
+
+/* Menu item styling */
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  color: #171717;
+  font-weight: 600;
+}
+
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #FF4141;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    z-index: 1000; /* Ensure it is below the hamburger menu */
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-login-cart {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo p {
+    font-size: 24px;
+  }
+
+  .nav-toggle .hamburger {
+    width: 20px;
+  }
+
+  .nav-menu li a {
+    font-size: 16px;
+  }
+}

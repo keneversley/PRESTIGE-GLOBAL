@@ -1,0 +1,96 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto; /* Adjust height based on content */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 5vw; /* Responsive font size */
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.popular hr {
+    width: 50%; /* Responsive width */
+    max-width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+    margin: 10px 0; /* Spacing */
+}
+
+.popular-item {
+    display: flex; /* Layout items in a row */
+    flex-wrap: nowrap; 
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    gap: 20px; /* Space between items */
+    width: 100%; /* Full width for the container */
+    padding-bottom: 20px; /* Add padding to avoid cutoff of images */
+}
+
+.popular-item > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    width: 200px; /* Fixed width for items */
+    height: 200px; /* Fixed height for items */
+    box-sizing: border-box;
+}
+
+.popular-item .image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden;  */
+}
+
+.popular-item img {
+    width: 100%; /* Image takes full width of its container */
+    height: 100%; /* Image takes full height of its container */
+    object-fit: cover; /* Cover the container without distortion */
+    border-radius: 10px; /* Aesthetics */
+}
+/* Remove default link styles */
+.item-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Additional styles if needed */
+.item-link img {
+    display: block; /* Ensure no extra space below the image */
+}
+
+
+/* Responsive Design for Different Screen Sizes */
+@media (max-width: 1024px) {
+    .popular-item > a {
+        width: 150px; /* Adjust width for medium screens */
+        height: 150px; /* Adjust height for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .popular-item > a {
+        width: 120px; /* Adjust width for small screens */
+        height: 120px; /* Adjust height for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-item > a {
+        width: 100px; /* Adjust width for very small screens */
+        height: 100px; /* Adjust height for very small screens */
+    }
+}
+

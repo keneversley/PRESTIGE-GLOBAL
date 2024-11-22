@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0; /* Remove or adjust bottom padding */
+    padding-bottom: 0; /* Remove or adjust bottom padding */
+}
+  
+body {
+    font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-size: 1.2rem; /* Reduced from 1.6rem */
+}
+
+h1 {
+    font-size: 4rem; /* Reduced from 6rem */
+}
+
+.app {
+    width: 90%; /* Reduced width */
+    height: 90vh; /* Reduced height */
+    position: relative;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    margin: 0 auto; /* Center the app */
+    transform: scale(0.8); /* Scale the entire app down */
+}
+
+.app:before {
+    content: '';
+    background: url('../Assets/sand.jpg') no-repeat center center/cover; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.app .search {
+    text-align: center;
+    padding: 0.5rem; /* Reduced padding */
+    
+}
+
+.app input {
+    padding: 0.5rem 1rem; /* Reduced padding */
+    font-size: 1rem; /* Reduced font size */
+    border-radius: 20px; /* Reduced border-radius */
+    border: 1px solid rgba(255,255,255, 0.8);
+    background: rgba(255,255,255, 0.1);
+    color: white; /* Text color */
+}
+
+::placeholder {
+    /* font-size: 0.9rem;  */
+    color: aliceblue;
+    /* color: white;  */
+    /* opacity: 1;  */
+
+}
+.app input::placeholder {
+    color: white; /* Placeholder text color */
+    opacity: 1; /* Ensure placeholder is fully opaque */
+}
+
+
+.container {
+    max-width: 600px; /* Reduced max-width */
+    width: 100%;
+    height: auto;
+    margin: auto;
+    /* padding: 1rem; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.app .top {
+    width: 100%;
+    margin: 0.5rem auto; /* Reduced margin */
+}
+
+.app .description {
+    bottom: 10px;
+    right: 10px;
+    transform: none;
+    font-size: 1rem; /* Reduced font size */
+}
+
+.app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem auto; /* Reduced margin */
+    padding: 0.5rem; /* Reduced padding */
+    border-radius: 10px; /* Reduced border-radius */
+    background-color: rgba(255,255,255, 0.2);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .description {
+      right: 15px;
+      font-size: 1.2rem; /* Adjusted for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .description {
+      right: 20px;
+      font-size: 1.4rem; /* Adjusted for laptops */
+    }
+}
+
+@media (max-width: 480px) {
+    .description {
+      right: 5px;
+      font-size: 0.8rem; /* Adjusted for small devices */
+    }
+
+    .app input {
+      width: 70%; /* Reduced width for small devices */
+    }
+}
+
+@media (max-width: 320px) {
+    .description {
+      right: 2px;
+      font-size: 0.6rem; /* Adjusted for smartwatches */
+    }
+
+    .app input {
+      width: 80%;
+      font-size: 0.7rem; /* Reduced font size */
+    }
+
+    h1 {
+      font-size: 2.5rem; /* Reduced h1 font size */
+    }
+}
+
+.app button {
+    margin-top: 0.5rem; /* Reduced margin */
+    padding: 0.5rem 1rem; /* Reduced padding */
+    font-size: 1rem; /* Reduced font size */
+    border-radius: 20px; /* Reduced border-radius */
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+}
+
+.app button:hover {
+    background-color: #007acc;
+}

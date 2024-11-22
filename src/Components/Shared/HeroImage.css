@@ -1,0 +1,49 @@
+/* Base styles for the hero image container */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px; /* Default height */
+  margin: 0px;
+  padding: 30px;
+  overflow: hidden;
+  margin-bottom: 75px; /* Add margin to create space below */
+}
+
+/* Base styles for the hero image */
+.hero-image {
+  width: calc(100% - 20px); /* Account for container padding */
+  height: calc(100% - 20px); /* Account for container padding */
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive adjustments for tablets and larger devices */
+@media (min-width: 600px) {
+  .hero-image-container {
+    height: 400px; /* Increase height for tablets and up */
+  }
+}
+
+/* Responsive adjustments for laptops and larger screens */
+@media (min-width: 1024px) {
+  .hero-image-container {
+    height: 500px; /* Increase height for laptops and up */
+  }
+}
+
+/* Responsive adjustments for smartwatches and small devices */
+@media (max-width: 320px) {
+  .hero-image-container {
+    height: 200px; /* Decrease height for very small devices */
+    padding: 5px; /* Adjust padding for small devices */
+  }
+  .hero-image {
+    width: calc(100% - 10px); /* Adjust width to account for new padding */
+    height: calc(100% - 10px); /* Adjust height to account for new padding */
+  }
+}
+
+  
